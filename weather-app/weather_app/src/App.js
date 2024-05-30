@@ -33,6 +33,8 @@ function App() {
           setWeather(null);
           setError('City not found.');
           console.error('Error fetching data:', error);
+        } else {
+          setError(null);
         }
         return res.json();
       })
@@ -45,6 +47,7 @@ function App() {
         console.error('Error fetching data:', error);
       });
   }
+
 
   return (
     <div className = "App">
@@ -74,7 +77,7 @@ function App() {
             <p>Humidity: {weather.main.humidity}%</p>
             <p>Visibility: {weather.visibility}% </p>
             <p>Clouds: {weather.clouds.all}% </p>
-            <p>wind: {weather.wind.speed}km/h - {weather.wind.deg}° </p>
+            <p>Wind: {weather.wind.speed}km/h - {weather.wind.deg}° </p>
           </div>
           <div>
             <p>Coordinates: {weather.coord.lon}, {weather.coord.lat}</p>
