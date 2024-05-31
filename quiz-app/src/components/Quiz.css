@@ -2,7 +2,7 @@
     max-width: 500px;
     margin: 40px auto;
     padding: 40px;
-    background-color: #fdf3d480;
+    background: linear-gradient(to right, #ff6b6b6b, #a2ff0063);
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -18,34 +18,82 @@
   
   .quiz-container li {
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 10px;
+    border: 2px solid #61b70b61;
+   
   }
   
   .quiz-container li:hover {
-    background-color: #e0e0e0;
+    background-color: #02bd8e2e;
   }
-  
+
+  .quiz-container li.selected {
+    background-color: #ff84008a; /* Example selected background color */
+    border: 2px solid #ff8502;
+  }
+
+  .correct {
+    background-color: #a2ff008f;
+  }
+
+  .correct::after {
+    content: '✓';
+    color: green;
+    font-size: 1.5rem;
+    margin-left: auto;
+    padding-left: 10px;
+}
+
+  .wrong {
+    background-color: #ff00007b;
+  }
+
+  .wrong::after {
+    content: '✗';
+    color: red;
+    font-size: 1.5rem;
+    margin-left: auto;
+    padding-left: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
   .quiz-container button {
-    background-color: #034f84;
-    color: #fff;
+    background: linear-gradient(to right, #f66161f5, #a2ff00);
+    color: #ffffff;
     border: none;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 0 10px;
   }
   
   .quiz-container button:hover {
-    background-color: #0267af;
+    background: linear-gradient(to right, #f97d7df5, #baf456e6);
+  }
+
+  .quiz-container button:disabled {
+    background: linear-gradient(to right, #774343f5, #5b762d);
+    cursor: not-allowed;
   }
   
-  .quiz-container .index {
-    margin-top: 1rem;
+  .index {
+    margin-top: 2rem;
     font-size: 0.9rem;
     color: #666;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
   }
+
+  
