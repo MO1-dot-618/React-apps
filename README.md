@@ -1,8 +1,8 @@
 # React-apps
 Basic apps with React
 
-##Weather app
+## Weather app
 Search city to get weather data
 
-##Quiz app
+## Quiz app
 A fun general knowledge quiz with a score at the end
