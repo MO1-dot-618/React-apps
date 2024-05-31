@@ -1,3 +1,7 @@
+/*
+  change the data as you like to ahve different questions
+  and different number of questions
+*/
 export const data = [
   {
     question: "How many time zones are there in Russia?",
